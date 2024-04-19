@@ -1,45 +1,9 @@
-/* # Front-end Style Guide
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-## Layout
-
-The designs were created to the following widths:
-
-- Mobile: 375px
-- Desktop: 1440px
-
-> 💡 These are just the design sizes. Ensure content is responsive and meets WCAG requirements by testing the full range of screen sizes from 320px to large screens.
-
-## Colors
-
-### Primary
-
-- Nutmeg: hsl(14, 45%, 36%)
-- Dark Raspberry: hsl(332, 51%, 32%)
-
-### Neutral
-
-- White: hsl(0, 0%, 100%)
-- Rose White: hsl(330, 100%, 98%)
-- Eggshell: hsl(30, 54%, 90%)
-- Light Grey: hsl(30, 18%, 87%)
-- Wenge Brown: hsl(30, 10%, 34%)
-- Dark Charcoal: hsl(24, 5%, 18%)
-
-## Typography
-
-### Body Copy
-
-- Font size (paragraph): 16px
-
-### Fonts
-
-- Family: [Young Serif](https://fonts.google.com/specimen/Young+Serif)
-- Weights: 400
-
-- Family: [Outfit](https://fonts.google.com/specimen/Outfit)
-- Weights: 400, 600, 700 */
-
-/* # General Styles */
 :root {
   --dark-brown: #854632;
   --dark-purple: #7b284f;
@@ -52,25 +16,22 @@ The designs were created to the following widths:
 
 body {
   font-family: "Outfit", serif;
-  font-size: 16px;
+  font-size: 1em;
   color: var(--primary-text);
-
 }
 
-h1{
+h1 {
   font-family: "Young Serif", sans-serif;
   font-weight: 700;
   color: var(--title);
 }
 
-h2,
-h3,
-h4,
-h5,
-h6 {
+h2{
   font-family: "Young Serif", sans-serif;
   font-weight: 700;
   color: var(--dark-brown);
+  margin-bottom: 1em;
+
 }
 
 p {
@@ -78,18 +39,23 @@ p {
 }
 
 h1 {
-  font-size: 48px;
+  font-size: 3em;
 }
 
 h2 {
-  font-size: 36px;
+  font-size: 2.25em;
 }
 
 h3 {
-  font-size: 24px;
+  font-size: 1.5em;
 }
 
 /* # Layout */
+
+
+header{
+  margin-block: 2em ;
+}
 
 body {
   display: flex;
@@ -106,6 +72,10 @@ main {
   border-radius: 2em;
 }
 
+main >* {
+  margin-block: 2em;
+}
+
 .prep {
   background-color: var(--light-rose);
   padding: 3em;
@@ -114,17 +84,17 @@ main {
 
 .prep h2 {
   font-family: "Outfit", serif;
-  font-size: 24px;
+  font-size: 1.5em;
   color: var(--dark-purple);
-  margin-bottom: 24px;
+  margin-bottom: 1.5em;
 }
 
-ul , ol {
+ul,
+ol {
   padding-left: 1.125em;
 }
 
-
- li {
+li {
   color: var(--dark-charcoal-color);
   margin: 5px;
   padding-inline: 2em;
@@ -135,51 +105,63 @@ ul , ol {
   color: var(--dark-purple);
 }
 
-p,.ing ul {
-  margin-block: 2em ;
+p,
+.ing ul {
+  margin-block: 2em;
 }
 
 .ing ul li {
   margin: 5px;
   padding-inline: 2em;
-  margin-block: 0.5em;
+  padding-bottom: 1em;
 }
 
 .ing li::marker {
   color: var(--dark-brown);
 }
 
-.row{
+.row {
   display: flex;
 }
 
-.row > *{
+.row > * {
   flex: 1;
   padding: 1em;
 }
 
-.ing,.inst ,.row:not(:last-child){
-  margin-bottom: 1em;
-  border-bottom: var(--secondary-text)  1px solid;
+.ing,
+.inst,
+.row:not(:last-child) {
+  border-bottom: var(--secondary-text) 1px solid;
 }
 
-
-.left{
+.left {
   font-weight: bold;
   color: var(--dark-brown);
 }
 
-
-.photo img{
+.photo img {
   width: 100%;
   border-radius: 1em;
 }
 
-main:not(:last-child){
+main:not(:last-child) {
   margin-block: 3.75em;
 }
 
-
-
-
-
+@media screen and (max-width: 376px) {
+  body{
+    font-size: 0.85em;
+  }
+  main {
+    width: auto;
+    border-radius: 0;
+    padding: 2em;
+  }
+  main:not(:last-child) {
+    margin-block: 0em;
+  }
+  h1{
+    font-size: 2em;
+  }
+}
